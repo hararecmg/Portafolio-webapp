@@ -1,25 +1,31 @@
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import { AppMain } from '../home';
-import { MovieApp } from '../movies';
-// import { MainNavbar } from '.';
+import { MainMenu } from '../main_menu';
+import { MenuCanvas } from '../canvas_menu';
+import { Ramdom } from './ramdom';
+import { Home } from './Home';
+import { useRoute } from '../../hooks/useRoute';
+
 
 export const AppRouter = () => {
 
+    const { route } = useRoute('');
+
     return (
         <Router>
-            
-            {/* <MainNavbar /> */}
-            
-            <Routes>
-                <Route
-                    path='/'
-                    element={ <AppMain /> } 
-                />
-                <Route
-                    path='/movie'
-                    element={ <MovieApp /> } 
-                />
-            </Routes>
+            <div className={`router__${route}`}>
+                <MainMenu />
+                <MenuCanvas />
+                <Routes>
+                    <Route
+                        path='/'
+                        element={ <Home /> } 
+                    />
+                    <Route
+                        path='/ramdom'
+                        element={ <Ramdom /> } 
+                    />
+                </Routes>
+            </div>
         </Router>
     )
 }

@@ -1,8 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { movieReducer } from '../slices/movieSlice';
+import { ramdomReducer } from '../slices';
+import { mainMenuReducer } from '../slices';
+import { offCanvasMenuReducer } from '../slices';
+import { favoriteReducer } from '../slices';
+import { routeReducer } from '../slices';
 
 export const store = configureStore({
   reducer: {
-    movie: movieReducer,
+    ramdom: ramdomReducer,
+    favorite: favoriteReducer,
+    mainMenu: mainMenuReducer,
+    route: routeReducer,
+    offCanvas: offCanvasMenuReducer,
   },
 });

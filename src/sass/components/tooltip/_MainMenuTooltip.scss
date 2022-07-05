@@ -1,0 +1,70 @@
+@use '../../design' as *;
+@use 'tooltip' as *;
+
+
+.main-menu {
+    
+    &__tooltip {
+
+        p {
+            opacity: 0;
+        }
+    }
+}
+
+
+@include laptop-screen {
+
+    .main-menu {
+    
+        &__tooltip {
+    
+            &--perfil {
+                @include tooltip-modifier(
+                    $grid-row-start: 8,
+                    $grid-row-end: 10,
+                    $grid-column-start: 4,
+                    $grid-column-end: 8,
+                );
+            }
+    
+            &--ramdom {
+                @include tooltip-modifier(
+                    $grid-row-start: 8,
+                    $grid-row-end: 10,
+                    $grid-column-start: 9,
+                    $grid-column-end: 14,
+                );
+            }
+            
+            &--search {
+                @include tooltip-modifier(
+                    $grid-row-start: 8,
+                    $grid-row-end: 10,
+                    $grid-column-start: 12,
+                    $grid-column-end: 16,
+                );
+            }
+            
+            &--favorites {
+                @include tooltip-modifier(
+                    $grid-row-start: 8,
+                    $grid-row-end: 10,
+                    $grid-column-start: 14,
+                    $grid-column-end: 18,
+                );
+            }
+    
+    
+            
+            // &--translate {
+            //     @include tooltip-modifier(
+            //         $grid-row-start: 8,
+            //         $grid-row-end: 10,
+            //         $grid-column-start: 24,
+            //         $grid-column-end: 27,
+            //     );
+            // }
+        }
+    }
+}

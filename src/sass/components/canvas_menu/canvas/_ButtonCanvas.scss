@@ -1,0 +1,37 @@
+@use '../../../design' as *;
+@use '../../../layout' as *;
+
+
+.off-canvas {
+    
+    &__button {
+        
+        border: 0;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255, 0.2);
+        transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        @include flex-container();
+
+        &:hover {
+            background-color: rgb(20, 157, 221, 0.7);
+            transform: scale(1.2);
+        }
+        
+    }
+}
+
+
+@include laptop-screen {
+
+    .off-canvas {
+    
+        &__button {
+            
+            grid-row: 2 / 3;
+            grid-column: 17 / 19;
+            width: calc(300vh / 50);
+            height: calc(300vh / 50);
+        }
+    }
+}

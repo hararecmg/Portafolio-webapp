@@ -1,0 +1,78 @@
+@use '../../../design' as *;
+@use '../../../layout' as *;
+
+
+.off-canvas {
+    
+    &__curriculum {
+
+        // border: 0.1rem solid #ffffff;
+        // border-radius: 1rem;
+        transition: border-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+        @include flex-container(
+            $flex-direction: column,
+        );
+
+        h2, article {
+            margin: 0;
+            padding: 0;
+            border: 0.1rem solid #ffffff;
+            border-radius: 1rem;
+            word-wrap: break-word;
+            text-align: center;
+            color: #ffffff;
+            transition: color 0.4s ease-in-out;
+            @include flex-item();
+            @include flex-container(
+                $flex-direction: column,
+            );
+            &:hover {
+                color: rgba(154, 203, 225, 0.7);
+            }
+        }
+
+        h2, h3 {
+            line-height: 2rem;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.7rem;
+        }
+        
+        p {
+            font-family: 'Crimson Text', serif;
+            text-transform: capitalize;
+            line-height: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        &:hover {
+            border-color: rgba(6,189,196,0.78);
+            transform: scale(1.1);
+            
+            h2, h3, p {
+                color: rgba(154, 203, 225, 0.7);
+            }
+        }
+    }
+}
+
+
+@include laptop-screen {
+
+    .off-canvas {
+    
+        &__curriculum {
+    
+            grid-row: 25 / 40;
+            grid-column: 2 / 9;
+            padding: 1vw;
+    
+        }
+    }
+}

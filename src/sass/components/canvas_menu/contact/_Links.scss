@@ -1,0 +1,44 @@
+@use '../../../design' as *;
+@use '../../../layout' as *;
+
+
+.off-canvas {
+    
+    &__link {
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255, 0.2);
+        background-image: linear-gradient(to right, transparent, transparent, rgb(183, 78, 145, 0.7), rgb(94, 66, 166, 0.7));
+        background-size: 300% 100%;
+        transition: background-position 400ms ease-in-out, transform 600ms ease-in-out;
+        @include flex-container(
+            $justify-content: center,
+        );
+
+        &:hover {
+            background-position: 100% 0;
+            transform: scale(1.25);
+        }
+
+    }
+
+    &__anchor {
+        display: inline-block;
+        @include flex-item();
+        @include flex-container(
+            $justify-content: center,
+        );
+    }
+}
+
+
+@include laptop-screen {
+
+    .off-canvas {
+    
+        &__link {
+            width: 8vh;
+            height: 8vh;
+        }
+    }
+}

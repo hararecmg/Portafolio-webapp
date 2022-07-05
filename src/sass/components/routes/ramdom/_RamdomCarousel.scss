@@ -1,0 +1,55 @@
+@use '../../../design' as *;
+@use '../../../layout' as *;
+
+
+@keyframes carousel-motion {
+    0% {
+        transform: translate(100%, 0);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+    
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+
+.ramdom {
+    
+    &__carousel {
+        width: 94vw;
+        height: 70vh;
+        animation-name: carousel-motion;
+        animation-delay: 0;
+        animation-duration: 40s;
+        animation-timing-function: linear;
+        transform: translate(100%, 0);
+        // background-image: linear-gradient(to left, blue, aqua);
+        // @include flex-item();
+        @include position(
+            $position: absolute,
+            $top: 3vh,
+            $left: 3vw,
+        );
+    }
+
+}
+
+
+@include laptop-screen {
+
+    .ramdom {
+        
+        &__carousel {
+            @include grid-container(
+                $grid-template-rows: repeat(3, 1fr),
+                $grid-template-columns: repeat(5, 1fr),
+                $gap: 3vw 3vh,
+            );
+        }
+    
+    }
+}

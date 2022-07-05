@@ -1,1 +1,1 @@
-export * from './movieAPI';
+export * from './giphyApi';

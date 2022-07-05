@@ -1,0 +1,42 @@
+@use '../../design' as *;
+@use '../../layout' as *;
+@use 'profile' as *;
+
+
+.off-canvas {
+    
+    &__profile {
+        @include flex-container(
+            $justify-content: center
+        );
+    }
+        
+    &__image {
+        transition: transform 400ms ease-in-out,
+            border-color 0.4s ease-out;
+        
+        &:hover {
+            transform: scale(1.1);
+            border-color: rgba(6,189,196,0.78);
+        }
+    }
+}
+
+
+@include laptop-screen {
+
+    .off-canvas {
+    
+        &__profile {
+            grid-row: 5 / 11;
+            grid-column: 7 / 13;
+        }
+            
+        &__image {
+            @include profile(
+                $img-sizes: 24vh,
+                $border: 0.2rem
+            );
+        }
+    }
+}

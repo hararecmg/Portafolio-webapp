@@ -1,0 +1,27 @@
+@mixin tablet-screen {
+    @media screen 
+    and (((min-width: 30em) and (orientation: portrait))
+        or ((min-width: 54em) and (orientation: landscape)))
+    and (((max-width: 50em) and (orientation: portrait))
+        or ((max-width: 80em) and (orientation: landscape))) {
+        @content;    
+    }
+}
+
+@mixin tablet-screen-portrait {
+    @media screen 
+    and (min-width: 30em)
+    and (max-width: 50em)
+    and (orientation: portrait) {
+        @content;    
+    }
+}
+
+@mixin tablet-screen-landscape {
+    @media screen 
+    and (min-width: 54em)
+    and (max-width: 80em)
+    and (orientation: landscape) {
+        @content;    
+    }
+}

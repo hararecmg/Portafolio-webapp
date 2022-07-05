@@ -1,0 +1,63 @@
+@use '../../design' as *;
+@use '../../layout' as *;
+@use '../tooltip' as *;
+
+
+.off-canvas {
+    
+    @include position(
+        $position: fixed,
+    );
+
+    input[type='checkbox'] {
+        
+        display: none;
+        
+        &:checked ~ .off-canvas__nav {
+            transform: translate(0, 0);
+            -webkit-box-shadow: 0.25rem 0 1.75rem 0.25rem rgba(0,0,0,1);
+            -moz-box-shadow: 0.25rem 0 1.75rem 0.25rem rgba(0,0,0,1);
+            box-shadow: 0.25rem 0 1.75rem 0.25rem rgba(0,0,0,1);
+        }
+    }
+
+    &__nav {
+        
+        overflow-y: scroll;
+        background-color: rgb(0, 0, 0);
+        transform: translate(-100%, 0);
+        transition: transform 0.7s linear;
+        @include position(
+            $position: absolute,
+        );
+
+        svg {
+            stroke: #ffffff;
+        }
+    }
+}
+
+
+@include laptop-screen {
+
+    .off-canvas {
+
+        height: 200vh;
+        width: 35vw;
+
+        &__nav {
+
+            width: 40vw;
+            height: 200vh;
+            @include grid-container(
+                $grid-template-rows: repeat(50, 4vh),
+                $grid-template-columns: repeat(20, 2vw),
+            );
+
+            svg {
+                max-width: 6vh;
+                max-height: 6vh;
+            }
+        }
+    }
+}

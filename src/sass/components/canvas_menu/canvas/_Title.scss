@@ -1,0 +1,65 @@
+@use '../../../design' as *;
+@use '../../../layout' as *;
+
+
+.off-canvas {
+    
+    &__title {
+
+        border: 0.1rem solid #ffffff;
+        border-radius: 1rem;
+        transition: border-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+        @include flex-container(
+            $flex-direction: column,
+        );
+
+        h2, p {
+            margin: 0;
+            padding: 0;
+            word-wrap: break-word;
+            text-align: center;
+            color: #ffffff;
+            transition: color 0.4s ease-in-out;
+            &:hover {
+                color: rgba(154, 203, 225, 0.7);
+            }
+        }
+
+        h2 {
+            line-height: 2rem;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+        }
+        
+        p {
+            font-family: 'Crimson Text', serif;
+            text-transform: capitalize;
+            line-height: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        &:hover {
+            border-color: rgba(6,189,196,0.78);
+            transform: scale(1.1);
+            
+            h2, p {
+                color: rgba(154, 203, 225, 0.7);
+            }
+        }
+    }
+}
+
+
+@include laptop-screen {
+
+    .off-canvas {
+    
+        &__title {
+    
+            grid-row: 12 / 18;
+            grid-column: 3 / 17;
+            padding: 1vw;
+    
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@mixin movil-screen {
+    @media screen 
+    and (((max-width: 30em) and (orientation: portrait))
+    or ((max-width: 54em) and (orientation: landscape))) {
+        @content;    
+    }
+}
+
+@mixin movil-screen-portrait {
+    @media screen 
+    and (max-width: 30em)
+    and (orientation: portrait) {
+        @content;    
+    }
+}
+
+@mixin movil-screen-landscape {
+    @media screen 
+    and (max-width: 54em)
+    and (orientation: landscape) {
+        @content;    
+    }
+}
+// 16px = 1em

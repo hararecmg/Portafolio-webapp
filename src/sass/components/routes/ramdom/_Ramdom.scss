@@ -1,0 +1,23 @@
+@use '../../../design' as *;
+@use '../../../layout' as *;
+
+
+.ramdom {
+    width: 100vw;
+    height: 78vh;
+    overflow: hidden;
+    @include position();
+    // @include flex-container(
+    //     $justify-content: center,
+    // );
+
+}
+
+
+@include laptop-screen {
+
+    .ramdom {
+        grid-row: 10 / 49;
+        grid-column: 1 / 51;
+    }
+}

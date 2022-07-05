@@ -1,0 +1,73 @@
+@use '../../layout' as *;
+
+
+@keyframes pulses {
+    0% {
+      transform: scale(1.5);
+    }
+  
+    50% {
+      transform: scale(0.8);
+    }
+  
+    100% {
+      transform: scale(1.4);
+    }
+}
+  
+@keyframes change-color {
+    from {
+      background-color: #A2231D;
+    }
+    
+    to {
+      background-color: #FF0080;
+    }
+}
+
+@keyframes loading {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+// @mixin favorite {
+//     cursor: pointer;
+//     opacity: 0.7;
+//     border-radius: 50%;
+//     background-color: #fff;
+//     background-image: -moz-linear-gradient(to right, transparent, transparent, rgba(6,189,196,0.78), #440496);
+//     background-image: -webkit-linear-gradient(to right, transparent, transparent, rgba(6,189,196,0.78), #440496);
+//     background-image: -ms-linear-gradient(to right, transparent, transparent, rgba(6,189,196,0.78), #440496);
+//     background-image: linear-gradient(to right, transparent, transparent, rgba(6,189,196,0.78), #440496);
+//     background-size: 300% 100%;
+//     -moz-transition: background-position 700ms ease-in-out, transform 700ms ease-in-out;
+//     -webkit-transition: background-position 700ms ease-in-out, transform 700ms ease-in-out;
+//     -ms-transition: background-position 700ms ease-in-out, transform 700ms ease-in-out;
+//     transition: background-position 700ms ease-in-out;
+//     // @include flex-item();
+//     @include flex-container(
+//         $justify-content: center,
+//     );
+// }
+
+@mixin heart($selector) {
+    #{$selector}::after,
+    #{$selector}::before {
+        position: absolute;
+        content: "";
+        background-color: #a00;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+        // animation: change-color 1s infinite;
+    }
+  
+    #{$selector}::after {
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+}

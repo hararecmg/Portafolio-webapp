@@ -1,0 +1,56 @@
+@use '../layout' as *;
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+// svg {
+//     stroke: black;
+//     max-width: calc(3500vw / 207);
+//     max-height: calc(300vh / 63);
+//     transition: stroke 800ms ease-in-out;
+// }
+
+body {
+    height: 100vh;
+    width: 100vw;
+    // background-image: -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    // background-image: -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    // background-image: -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+    // // background-color: #9731a6;
+    // // background-color: #e22b51;
+    // background-image: linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+}
+
+
+#root {
+    width: max-content(auto, 100vw);
+    height: max-content(auto, 100vh);
+        
+}
+
+    .router {
+        &__ramdom,
+        &__search,
+        &__favorites {
+            width: max-content(auto, 100vw);
+            height: max-content(auto, 100vh);
+            background-image: linear-gradient(45deg, #ff73ac, #9731a6, #322180);
+            @include position();
+            @include grid-container(
+                $grid-template-rows: repeat(50, 2vh),
+                $grid-template-columns: repeat(50, 2vw),
+                $grid-auto-rows: 2vh,
+                $grid-auto-columns: 2vw,
+            );
+        }
+    }

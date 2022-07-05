@@ -1,0 +1,138 @@
+@use '../../design' as *;
+@use '../../layout' as *;
+@use 'picture' as *;
+
+
+.picture {
+    
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 0.1rem solid #fff;
+    transition: border-color 500ms linear, transform 500ms linear, box-shasow 500ms linear;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+    @include position();
+
+    &:hover {
+        z-index: 998;
+        border-color: rgba(6,189,196,0.78);
+        transform: scale(1.28);
+        box-shadow: calc(-1rem / 8) calc(11rem / 8) calc(7rem / 2) calc(-3rem / 8) rgba(255, 255, 255, 0.8);
+    }
+    
+    &__image {
+        
+        @include flex-container(
+            $justify-content: center,
+        );
+    }
+    
+    &__loading {
+        
+        width: 4vw;
+        height: 4vw;
+        border-radius: 50%;
+        margin: auto;
+        opacity: 0.8;
+        border: 0.5vw solid rgba(0, 0, 0, 0.1);
+        border-top-color: #fff;
+        animation: loading 0.5s linear infinite;
+    }
+    
+    &__favorite {
+
+        @include flex-container(
+            $justify-content: center,
+        );
+        
+        &--heart, &--pulses {
+            cursor: pointer;
+            opacity: 0.7;
+            border-radius: 50%;
+            background-color: #fff;
+            transition: background-color 700ms ease-in-out, transform 700ms ease-in-out;
+            @include position();
+            @include flex-container(
+                $justify-content: center,
+            );
+
+            &::after, &::before {
+                position: absolute;
+                content: "";
+                background-color: #FF0080;
+                transform: rotate(-45deg);
+                transform-origin: 0 100%;
+                transition: background-color 700ms ease-in-out;
+            }
+
+            &::after {
+                transform: rotate(45deg);
+                transform-origin: 100% 100%;
+            }
+        
+            &:hover {
+                background-color: #FF0080;
+                transform: scale(1.1);
+
+                &::after, &::before {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        &--pulses {
+            animation: pulses 1s infinite;
+        }
+    } 
+}
+
+
+@include laptop-screen {
+
+    .picture {
+    
+        @include grid-container(
+            $grid-template-rows: repeat(3, 1fr),
+            $grid-template-columns: repeat(3, 1fr),
+        );
+    
+        &__image {
+            
+            grid-row: 1 / 4;
+            grid-column: 1 / 4;
+            img {
+                @include flex-item();
+                width: calc(82vw / 5);
+                height: calc(64vh / 3);
+            }
+        }
+        
+        &__loading {
+            
+            grid-row: 1 / 4;
+            grid-column: 1 / 4;
+        }
+        
+        &__favorite {
+            
+            grid-row: 3 / 4;
+            grid-column: 3 / 4;
+            
+            &--heart, &--pulses {
+                width: 7vh;
+                height: 7vh;
+    
+                &::after, &::before {
+                    top: 1vh;
+                    left: 3.5vh;
+                    width: 3.5vh;
+                    height: calc(28vh / 5);
+                    border-radius: 3.5vh 3.5vh 0 0;
+                }
+    
+                &::after {
+                    left: 0;
+                }
+            }
+        }   
+    }
+}

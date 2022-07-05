@@ -1,0 +1,27 @@
+@use '../../layout' as *;
+
+
+@mixin tooltip-modifier(
+    $grid-row-start,
+    $grid-row-end,
+    $grid-column-start,
+    $grid-column-end,
+    $background: rgb(0, 0, 0, 0.5),
+    $text: #fff,
+) {
+    grid-row-start: $grid-row-start;
+    grid-row-end: $grid-row-end;
+    grid-column-start: $grid-column-start;
+    grid-column-end: $grid-column-end;
+    border-radius: 1rem;
+    background-color: $background;
+    @include flex-container();
+
+    p {
+        color: $text;
+        font-family: 'Crimson Text', serif;
+        font-size: 1.2rem;
+        text-align: center;
+        @include flex-item();
+    }
+}

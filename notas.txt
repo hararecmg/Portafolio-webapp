@@ -1,0 +1,17 @@
+100vw * (7/23) = width-total(navigation)
+12vh * (5/7) = height-total(navigation)
+
+
+width-total(navigation) / 4 = width-total(div) (por ahora)
+height-total(navigation) * (7/9) = height-total(div)
+
+
+width-total(navigation) * (5/9) = max-width-total(links)
+height-total(navigation) * (5/9) = max-height-total(links)
+
+por lo tanto
+
+max-width-total(links) = 100vw * (7/23) * (5/9) = 100vw * (35/207)
+max-height-total(links) = 12vh * (5/7) * (5/9) = 12vh * (25/63)
+
+height-total(div) = 12vh * (3/5) * (8/10) = 12vh * (24/50) = 12vh * (12/25)

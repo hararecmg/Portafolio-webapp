@@ -1,0 +1,11 @@
+@mixin profile($img-sizes, $border) {
+    
+    border-radius: 50%;
+    overflow: hidden;
+    border: $border solid #ffffff;
+
+    img {
+        max-width: $img-sizes;
+        max-height: $img-sizes;
+    }
+}

@@ -69,3 +69,235 @@
         }
     }
 }
+
+
+@include tablet-screen-landscape {
+
+    .off-canvas {
+    
+        &__tooltip {
+            
+            &--button {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 4,
+                    $grid-row-end: 5,
+                    $grid-column-start: 16,
+                    $grid-column-end: 19,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+
+            &--linkedin {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 4,
+                    $grid-column-end: 8,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+            
+            &--github {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 8,
+                    $grid-column-end: 12,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+
+            &--academico {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 10,
+                    $grid-column-end: 18,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+        }
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .off-canvas {
+    
+        &__tooltip {
+            
+            &--button {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 4,
+                    $grid-row-end: 5,
+                    $grid-column-start: 16,
+                    $grid-column-end: 19,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+
+            &--linkedin {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 4,
+                    $grid-column-end: 8,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+            
+            &--github {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 8,
+                    $grid-column-end: 12,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+
+            &--academico {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 8,
+                    $grid-column-end: 19,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+        }
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .off-canvas {
+    
+        &__tooltip {
+            
+            &--button {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 4,
+                    $grid-row-end: 5,
+                    $grid-column-start: 16,
+                    $grid-column-end: 19,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+
+            &--linkedin {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 4,
+                    $grid-column-end: 8,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+            
+            &--github {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 8,
+                    $grid-column-end: 12,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+
+            &--academico {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 8,
+                    $grid-column-end: 19,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+        }
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .off-canvas {
+    
+        &__tooltip {
+            
+            &--button {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 4,
+                    $grid-row-end: 5,
+                    $grid-column-start: 16,
+                    $grid-column-end: 19,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+
+            &--linkedin {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 4,
+                    $grid-column-end: 8,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+            
+            &--github {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 8,
+                    $grid-column-end: 12,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+
+            &--academico {
+                
+                @include tooltip-modifier(
+                    $grid-row-start: 23,
+                    $grid-row-end: 24,
+                    $grid-column-start: 8,
+                    $grid-column-end: 19,
+                    $background: rgba(255, 255, 255, 0.5),
+                    $text: #ffffff
+                );
+            }
+        }
+    }
+}

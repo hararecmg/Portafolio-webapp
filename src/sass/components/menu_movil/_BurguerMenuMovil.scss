@@ -1,0 +1,137 @@
+@use '../../design' as *;
+@use '../../layout' as *;
+
+
+@keyframes neon {
+    0% {
+        box-shadow: inset 0 0 1rem red, 0 0 2rem red;
+    }
+    
+    50% {
+        box-shadow: inset 0 0 0 red, 0 0 1rem red;
+    }
+    
+    0% {
+        box-shadow: inset 0 0 1rem red, 0 0 2rem red;
+    }
+}
+
+@keyframes opacity-beginning {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+.menu-movil {
+
+    &__neon {
+        cursor: pointer;
+        width: 7vh;
+        height: 7vh;
+        padding: 0;
+        border-radius: 50%;
+        background-color: #000;
+        border: 0.4vh solid #fff;
+        transition: transform 500ms ease-in-out, border-width 500ms ease-in-out;
+        animation: neon 1.5s infinite;
+        position: fixed;
+        top: 1.5vh;
+        right: 1.5vh;
+        @include flex-container(
+            $justify-content: center,
+        );
+        
+        &:hover {
+            transform: scale(1.25);
+            border-width: 0.3vh;
+        }
+    }
+    
+    &__button {
+        width: 7vh;
+        height: 7vh;
+        animation: opacity-beginning 1s linear;
+        @include flex-item();
+        @include flex-container(
+            $justify-content: center,
+        );
+        // @include position(
+        //     $position: absolute,
+        //     $top: 0,
+        //     $left: 0,
+        //     $z-index: 998,
+        // );
+
+        svg {
+            width: 5vh;
+            height: 5vh;
+            stroke: #fff;
+            margin: auto;
+            // @include flex-item();
+        }
+    }
+
+    &__burger {
+        width: 7vh;
+        height: 7vh;
+        animation: opacity-beginning 1s linear;
+        @include flex-item();
+        @include flex-container(
+            $justify-content: center,
+        );
+        // @include position(
+        //     $position: absolute,
+        //     $top: 0,
+        //     $left: 0,
+        //     $z-index: 999,
+        // );
+            
+        svg {
+            width: 5vh;
+            height: 5vh;
+            stroke: #fff;
+            margin: auto;
+            // @include flex-item();
+        }
+    }
+}
+
+
+@include laptop-screen {
+    .menu-movil {
+
+        &__neon {
+            display: none;
+        }
+        
+        &__button {
+            display: none;
+        }
+    
+        &__burger {
+            display: none;
+        }
+    }
+}
+
+
+@include tablet-screen-landscape {
+    .menu-movil {
+
+        &__neon {
+            display: none;
+        }
+        
+        &__button {
+            display: none;
+        }
+    
+        &__burger {
+            display: none;
+        }
+    }
+}

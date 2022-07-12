@@ -23,6 +23,8 @@ export const LinkedinLink = () => {
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     className='icon icon-tabler icon-tabler-brand-linkedin'
+                    width= '8vh'
+                    height= '8vh'
                     viewBox='0 0 24 24'
                     strokeWidth='1.5'
                     fill='none'

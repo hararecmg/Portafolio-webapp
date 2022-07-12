@@ -25,6 +25,7 @@
 .main-menu {
     
     &__link {
+        
         display: inline-block;
         border-radius: 50%;
         cursor: pointer;
@@ -47,12 +48,28 @@
                 stroke: #fff;
             }
         }
-
     }
 }
 
 
 @include laptop-screen {
+
+    .main-menu {
+    
+        &__link {
+            width: calc(11vh / 2);
+            height: calc(144vh / 25);
+
+            svg {
+                max-width: calc(3500vw / 207);
+                max-height: calc(300vh / 63);
+            }
+        }
+    }
+}
+
+
+@include tablet-screen-landscape {
 
     .main-menu {
     

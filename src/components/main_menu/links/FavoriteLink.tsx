@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useMainMenu } from '../../../hooks';
+import { useRoute } from '../../../hooks/useRoute';
 
 
 export const FavoriteLink = () => {
@@ -8,19 +9,21 @@ export const FavoriteLink = () => {
         handleMouseOverMainMenu, 
         handleMouseOutMainMenu
     } = useMainMenu('favorites');
+    const { handleClickRoute } = useRoute('favorites');
 
     return (
         <li
             className='main-menu__link'
             onMouseOver={handleMouseOverMainMenu}
             onMouseOut={handleMouseOutMainMenu}
+            onClick={handleClickRoute}
         >
             <NavLink to='/favorites'>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    width='auto'
-                    height='auto'
                     className='icon icon-tabler icon-tabler-heart'
+                    width= '3rem'
+                    height= '3rem'
                     viewBox='0 0 24 24'
                     strokeWidth='1.5'
                     fill='none'

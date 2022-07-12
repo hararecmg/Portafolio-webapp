@@ -21,3 +21,42 @@
         grid-column: 1 / 51;
     }
 }
+
+
+@include tablet-screen-landscape {
+
+    .ramdom {
+        grid-row: 10 / 49;
+        grid-column: 1 / 51;
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .ramdom {
+        grid-row: 10 / 49;
+        grid-column: 1 / 51;
+        height: max-content(auto, 78vh);
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .ramdom {
+        grid-row: 10 / 49;
+        grid-column: 1 / 51;
+        height: max-content(auto, 78vh);
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .ramdom {
+        grid-row: 10 / 49;
+        grid-column: 1 / 51;
+        height: max-content(auto, 78vh);
+    }
+}

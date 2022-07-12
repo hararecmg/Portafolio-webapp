@@ -24,14 +24,8 @@
     
     &__links-menu {
         background-color: #fff;
-        background-image: -moz-linear-gradient(to right, transparent, transparent, rgba(6,189,196,0.78), #440496);
-        background-image: -webkit-linear-gradient(to right, transparent, transparent, rgba(6,189,196,0.78), #440496);
-        background-image: -ms-linear-gradient(to right, transparent, transparent, rgba(6,189,196,0.78), #440496);
         background-image: linear-gradient(to right, transparent, transparent, rgba(6,189,196,0.78), #440496);
         background-size: 300% 100%;
-        -moz-transition: background-position 1s ease-in-out;
-        -webkit-transition: background-position 1s ease-in-out;
-        -ms-transition: background-position 1s ease-in-out;
         transition: background-position 1s ease-in-out;
         @include flex-container();
 
@@ -57,13 +51,57 @@
             border-radius: 1rem;
             grid-row: 2 / 5;
             grid-column: 10 / 18;
-            // animation-name: beginning-desktop;
-            // animation-duration: 1s;
-            // animation-timing-function: ease-in-out;
-            // animation-delay: 0;
         }
         
     }
 }
 
 
+@include tablet-screen-landscape {
+
+    .main-menu {
+    
+        &__links-menu {
+            border-radius: 1rem;
+            grid-row: 2 / 5;
+            grid-column: 10 / 18;
+        }
+        
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .main-menu {
+    
+        &__links-menu {
+            display: none;
+        }
+        
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .main-menu {
+    
+        &__links-menu {
+            display: none;
+        }
+        
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .main-menu {
+    
+        &__links-menu {
+            display: none;
+        }
+        
+    }
+}

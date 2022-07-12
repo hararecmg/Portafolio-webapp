@@ -40,3 +40,79 @@
         }
     }
 }
+
+
+@include tablet-screen-landscape {
+
+    .off-canvas {
+    
+        &__profile {
+            grid-row: 5 / 11;
+            grid-column: 7 / 13;
+        }
+            
+        &__image {
+            @include profile(
+                $img-sizes: 24vh,
+                $border: 0.2rem
+            );
+        }
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .off-canvas {
+    
+        &__profile {
+            grid-row: 5 / 11;
+            grid-column: 7 / 13;
+        }
+            
+        &__image {
+            @include profile(
+                $img-sizes: 24vh,
+                $border: 0.1rem
+            );
+        }
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .off-canvas {
+    
+        &__profile {
+            grid-row: 5 / 11;
+            grid-column: 5 / 15;
+        }
+            
+        &__image {
+            @include profile(
+                $img-sizes: 24vh,
+                $border: 0.1rem
+            );
+        }
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .off-canvas {
+    
+        &__profile {
+            grid-row: 5 / 11;
+            grid-column: 5 / 15;
+        }
+            
+        &__image {
+            @include profile(
+                $img-sizes: 24vh,
+                $border: 0.1rem
+            );
+        }
+    }
+}

@@ -2,6 +2,7 @@ import { LinksMenu } from './links';
 import { MainMenuProfile } from '../picture_frames';
 import { useAppSelector } from '../../hooks';
 import { Tooltip } from '../tooltip';
+import { BurguerMenuMovil } from '../menu_movil';
 
 
 export const MainMenu = () => {
@@ -22,7 +23,7 @@ export const MainMenu = () => {
             <nav className='main-menu__nav'>
                 <MainMenuProfile />
                 <LinksMenu />
-
+                <BurguerMenuMovil />
             </nav>
                 
                 { !open && <Tooltip /> }

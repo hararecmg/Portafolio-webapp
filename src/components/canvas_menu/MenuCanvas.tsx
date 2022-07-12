@@ -24,12 +24,8 @@ export const MenuCanvas = () => {
         >
             <input
                 type='checkbox'
+                checked={open}
                 readOnly
-                checked={
-                    open
-                        ? true
-                        : false
-                }
             />
             <nav className='off-canvas__nav'>
                 <Tooltip />
@@ -37,7 +33,6 @@ export const MenuCanvas = () => {
                 <OffCanvasProfile />
                 <Title />
                 <ContactLinks />
-                {/* <Curriculum /> */}
             </nav>
         </div>
     )

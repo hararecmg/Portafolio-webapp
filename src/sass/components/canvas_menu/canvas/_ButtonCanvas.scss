@@ -35,3 +35,63 @@
         }
     }
 }
+
+
+@include tablet-screen-landscape {
+
+    .off-canvas {
+    
+        &__button {
+            
+            grid-row: 2 / 3;
+            grid-column: 17 / 19;
+            width: calc(300vh / 50);
+            height: calc(300vh / 50);
+        }
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .off-canvas {
+    
+        &__button {
+            
+            grid-row: 2 / 3;
+            grid-column: 17 / 19;
+            width: calc(300vh / 50);
+            height: calc(300vh / 50);
+        }
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .off-canvas {
+    
+        &__button {
+            
+            grid-row: 2 / 3;
+            grid-column: 17 / 19;
+            width: calc(300vh / 50);
+            height: calc(300vh / 50);
+        }
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .off-canvas {
+    
+        &__button {
+            
+            grid-row: 2 / 3;
+            grid-column: 17 / 19;
+            width: calc(300vh / 50);
+            height: calc(300vh / 50);
+        }
+    }
+}

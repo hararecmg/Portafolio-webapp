@@ -42,3 +42,51 @@
         }
     }
 }
+
+
+@include tablet-screen-landscape {
+
+    .off-canvas {
+    
+        &__link {
+            width: 8vh;
+            height: 8vh;
+        }
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .off-canvas {
+    
+        &__link {
+            width: 8vh;
+            height: 8vh;
+        }
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .off-canvas {
+    
+        &__link {
+            width: 8vh;
+            height: 8vh;
+        }
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .off-canvas {
+    
+        &__link {
+            width: 8vh;
+            height: 8vh;
+        }
+    }
+}

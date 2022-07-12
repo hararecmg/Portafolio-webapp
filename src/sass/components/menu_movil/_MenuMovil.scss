@@ -1,0 +1,158 @@
+@use '../../design' as *;
+@use '../../layout' as *;
+@use '../tooltip' as *;
+
+
+.menu-movil {
+    
+    @include position(
+        $position: fixed,
+        $top: 15vh,
+        $left: 10vw,
+    );
+
+    input[type='checkbox'] {
+
+        opacity: 0;
+        
+        &:checked ~ .menu-movil__nav {
+            transform: translate(0, 0);
+            box-shadow: -1rem 1rem 2rem 0 rgba(0,0,0,0.75);
+        }
+    }
+
+    &__nav {
+        
+        background-color: rgba(0, 0, 0, 0.8);
+        border-bottom-left-radius: 1rem;
+        border-top-left-radius: 1rem;
+        transform: translate(100%, 0);
+        transition: transform 0.7s linear;
+        @include position(
+            $position: absolute,
+        );
+        @include flex-container(
+            $justify-content: center,
+        );
+    }
+
+    &__container {
+        @include flex-container(
+            $flex-direction: column,
+        );
+    }
+}
+
+
+@include laptop-screen {
+
+    .menu-movil {
+
+        display: none;
+
+        // &__nav {
+
+        //     width: 100vw;
+        //     height: 90vh;
+        //     @include grid-container(
+        //         $grid-template-rows: repeat(25, 4vh),
+        //         $grid-template-columns: repeat(20, 2vw),
+        //     );
+
+        //     svg {
+        //         max-width: 6vh;
+        //         max-height: 6vh;
+        //     }
+        // }
+    }
+}
+
+
+@include tablet-screen-landscape {
+
+    .menu-movil {
+
+        display: none;
+
+        // &__nav {
+
+        //     width: 40vw;
+        //     height: 100vh;
+        //     @include grid-container(
+        //         $grid-template-rows: repeat(25, 4vh),
+        //         $grid-template-columns: repeat(20, 2vw),
+        //     );
+
+        //     svg {
+        //         max-width: 6vh;
+        //         max-height: 6vh;
+        //     }
+        // }
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .menu-movil {
+
+        width: 90vw;
+        height: 75vh;
+        
+        &__nav {
+
+            width: 90vw;
+            height: 75vh;
+        }
+        
+        &__container {
+
+            width: 90vw;
+            height: 75vh;
+        }
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .menu-movil {
+
+        width: 90vw;
+        height: 75vh;
+
+        &__nav {
+
+            width: 90vw;
+            height: 75vh;
+        }
+
+        &__container {
+
+            width: 90vw;
+            height: 75vh;
+        }
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .menu-movil {
+
+        width: 90vw;
+        height: 75vh;
+
+        &__nav {
+
+            width: 90vw;
+            height: 75vh;
+        }
+
+        &__container {
+
+            width: 90vw;
+            height: 75vh;
+        }
+    }
+}

@@ -1,9 +1,11 @@
-import { useAppDispatch } from './reduxHooks';
+import { useAppDispatch, useAppSelector } from './reduxHooks';
 import { MainMenuTypes } from '../typescript/interfaces/redux';
 import { setMouseStateMainMenu } from '../app/slices';
+import { mainMenuLoadingStyleThunk } from '../app/thunks/mainMenuLoadingStyleThunk';
 
 export const useMainMenu = ( menuItem: MainMenuTypes = '' ) => {
 
+    const { open, loading } = useAppSelector(state => state.mainMenu);
     const dispatch = useAppDispatch();
 
     const handleMouseOverMainMenu = (): void => {
@@ -39,6 +41,15 @@ export const useMainMenu = ( menuItem: MainMenuTypes = '' ) => {
             tooltip_text: ''
         }))
     }
+    const handleOpenMainMenu = (): void => {
+        dispatch(mainMenuLoadingStyleThunk())
+    }
 
-    return { handleMouseOverMainMenu, handleMouseOutMainMenu }
+    return { 
+        handleMouseOverMainMenu, 
+        handleMouseOutMainMenu,
+        handleOpenMainMenu,
+        open,
+        loading, 
+    }
 }

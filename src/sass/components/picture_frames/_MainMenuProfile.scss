@@ -49,10 +49,6 @@
         &__profile {
             grid-row: 1 / 6;
             grid-column: 5 / 7;
-            // animation-name: beginning-desktop;
-            // animation-duration: 1s;
-            // animation-timing-function: ease-in-out;
-            // animation-delay: 0;
         }
             
         &__image {
@@ -63,5 +59,86 @@
                 $border: 0.1rem
             );
         }
+    }
+}
+
+
+@include tablet-screen-landscape {
+
+    .main-menu {
+    
+        &__profile {
+            grid-row: 1 / 6;
+            grid-column: 5 / 7;
+        }
+            
+        &__image {
+            max-width: calc(40vh / 5);
+            max-height: calc(40vh / 5);
+            @include profile(
+                $img-sizes: calc(36vh / 5),
+                $border: 0.1rem
+            );
+        }
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .main-menu {
+    
+        &__profile {
+            display: none;
+        }
+            
+        // &__image {
+        //     max-width: calc(40vh / 5);
+        //     max-height: calc(40vh / 5);
+        //     @include profile(
+        //         $img-sizes: calc(36vh / 5),
+        //         $border: 0.1rem
+        //     );
+        // }
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .main-menu {
+    
+        &__profile {
+            display: none;
+        }
+            
+        // &__image {
+        //     max-width: calc(40vh / 5);
+        //     max-height: calc(40vh / 5);
+        //     @include profile(
+        //         $img-sizes: calc(36vh / 5),
+        //         $border: 0.1rem
+        //     );
+        // }
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .main-menu {
+    
+        &__profile {
+            display: none;
+        }
+            
+        // &__image {
+        //     max-width: calc(40vh / 5);
+        //     max-height: calc(40vh / 5);
+        //     @include profile(
+        //         $img-sizes: calc(36vh / 5),
+        //         $border: 0.1rem
+        //     );
+        // }
     }
 }

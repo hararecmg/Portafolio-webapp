@@ -22,9 +22,9 @@ export const RamdomLink = () => {
             <NavLink to='/ramdom'>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    width='auto'
-                    height='auto'
                     className='icon icon-tabler icon-tabler-play-card'
+                    width= '3rem'
+                    height= '3rem'
                     viewBox='0 0 24 24'
                     strokeWidth='1'
                     fill='none'

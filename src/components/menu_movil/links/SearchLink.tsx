@@ -5,25 +5,26 @@ import { useRoute } from '../../../hooks/useRoute';
 
 export const SearchLink = () => {
 
-    const { 
-        handleMouseOverMainMenu, 
-        handleMouseOutMainMenu
-    } = useMainMenu('search');
     const { handleClickRoute } = useRoute('search');
+    const { handleOpenMainMenu } = useMainMenu('');
 
     return (
         <li
-            className='main-menu__link'
-            onMouseOver={handleMouseOverMainMenu}
-            onMouseOut={handleMouseOutMainMenu}
-            onClick={handleClickRoute}
+            className='menu-movil__link'
+            onClick={
+                () => {
+                    handleClickRoute();
+                    handleOpenMainMenu();
+                }
+            }
         >
             <NavLink to='/search'>
+                <div className='menu-movil__svg'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
+                        width='8vh'
+                        height='8vh'
                         className='icon icon-tabler icon-tabler-search'
-                        width= '3rem'
-                        height= '3rem'
                         viewBox='0 0 24 24'
                         strokeWidth='1'
                         fill='none'
@@ -34,7 +35,12 @@ export const SearchLink = () => {
                         <circle cx='10' cy='10' r='7' />
                         <line x1='21' y1='21' x2='15' y2='15' />
                     </svg>
+                </div>
+                <p className='menu-movil__text'>
+                    Busqueda
+                </p>
             </NavLink>
+
         </li>
     )
 }

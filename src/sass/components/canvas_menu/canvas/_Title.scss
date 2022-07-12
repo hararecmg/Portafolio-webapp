@@ -63,3 +63,63 @@
         }
     }
 }
+
+
+@include tablet-screen-landscape {
+
+    .off-canvas {
+    
+        &__title {
+    
+            grid-row: 12 / 18;
+            grid-column: 3 / 17;
+            padding: 1vw;
+    
+        }
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .off-canvas {
+    
+        &__title {
+    
+            grid-row: 12 / 18;
+            grid-column: 3 / 17;
+            padding: 1vw;
+    
+        }
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .off-canvas {
+    
+        &__title {
+    
+            grid-row: 12 / 18;
+            grid-column: 3 / 17;
+            padding: 1vw;
+    
+        }
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .off-canvas {
+    
+        &__title {
+    
+            grid-row: 12 / 18;
+            grid-column: 3 / 17;
+            padding: 1vw;
+    
+        }
+    }
+}

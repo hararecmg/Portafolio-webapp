@@ -39,12 +39,12 @@ body {
 }
 
     .router {
+        
         &__ramdom,
         &__search,
         &__favorites {
             width: max-content(auto, 100vw);
             height: max-content(auto, 100vh);
-            background-image: linear-gradient(45deg, #ff73ac, #9731a6, #322180);
             @include position();
             @include grid-container(
                 $grid-template-rows: repeat(50, 2vh),
@@ -52,5 +52,17 @@ body {
                 $grid-auto-rows: 2vh,
                 $grid-auto-columns: 2vw,
             );
+        }
+        
+        &__ramdom {
+            background-image: linear-gradient(45deg, #ff73ac, #9731a6, #322180);
+        }
+        
+        &__search {
+            background-image: linear-gradient(135deg, #01c3cc, #4e46f3, #7d2ae7);
+        }
+        
+        &__favorites {
+            background-color: #ff73ac;
         }
     }

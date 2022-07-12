@@ -2,25 +2,8 @@
 @use '../../layout' as *;
 
 
-@keyframes beginning-desktop {
-    0% {
-        opacity: 0;
-        transform: translate(-100%, 0);
-    }
-    
-    100% {
-        opacity: 1;
-        // grid-row: 1 / 6;
-        transform: translate(0, 0);
-    }
-}
-
 .main-menu {
     
-    // animation-name: beginning-desktop;
-    // animation-duration: 1.5s;
-    // animation-timing-function: ease-in-out;
-    // animation-delay: 0;
     @include position(
         $position: fixed,
         $z-index: 1,
@@ -79,6 +62,101 @@
                 $grid-template-rows: repeat(5, 1fr),
                 $grid-template-columns: repeat(28, 1fr),
             );
+            
+            &::after {
+                bottom: calc(-1vh / 5);
+                height: calc(1vh / 5);
+            }
+        }
+    }
+}
+
+
+@include tablet-screen-landscape {
+
+    .main-menu {
+    
+        width: 100vw;
+        height: 18vh;
+        @include grid-container(
+            $grid-template-rows: repeat(9, 2vh),
+            $grid-template-columns: repeat(28, calc(100vw / 28)),
+        );
+    
+        &__nav {
+    
+            grid-row: 1/7;
+            grid-column: 1/29;
+            @include grid-container(
+                $grid-template-rows: repeat(5, 1fr),
+                $grid-template-columns: repeat(28, 1fr),
+            );
+            
+            &::after {
+                bottom: calc(-1vh / 5);
+                height: calc(1vh / 5);
+            }
+        }
+    }
+}
+
+
+@include tablet-screen-portrait {
+
+    .main-menu {
+    
+        width: 100vw;
+        height: 10vh;
+    
+        &__nav {
+
+            width: 100vw;
+            height: 10vh;
+            @include position();
+            
+            &::after {
+                bottom: calc(-1vh / 5);
+                height: calc(1vh / 5);
+            }
+        }
+    }
+}
+
+
+@include movil-screen-landscape {
+
+    .main-menu {
+    
+        width: 100vw;
+        height: 10vh;
+    
+        &__nav {
+
+            width: 100vw;
+            height: 10vh;
+            @include position();
+            
+            &::after {
+                bottom: calc(-1vh / 5);
+                height: calc(1vh / 5);
+            }
+        }
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .main-menu {
+    
+        width: 100vw;
+        height: 10vh;
+    
+        &__nav {
+
+            width: 100vw;
+            height: 10vh;
+            @include position();
             
             &::after {
                 bottom: calc(-1vh / 5);

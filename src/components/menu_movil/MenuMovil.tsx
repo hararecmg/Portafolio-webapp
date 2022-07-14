@@ -1,7 +1,7 @@
 import { useRoute } from '../../hooks/useRoute';
-import { useMainMenu } from '../../hooks/useMainMenu';
+import { useMainMenu } from '../../hooks';
+import { HomeLink } from './links';
 import { RamdomLink } from './links';
-import { SearchLink } from './links';
 import { FavoriteLink } from './links';
 
 
@@ -44,8 +44,9 @@ export const MenuMovil = () => {
             >
                 <ul className='menu-movil__container'>
                     {/* <ProfileLink /> */}
+                    <HomeLink />
                     <RamdomLink />
-                    <SearchLink />
+                    {/* <SearchLink /> */}
                     <FavoriteLink />
                 </ul>
             </nav>

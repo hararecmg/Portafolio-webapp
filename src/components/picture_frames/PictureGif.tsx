@@ -13,13 +13,13 @@ export const PictureGif = (props: RamdomGif) => {
             <div className={
                     loading
                         ? 'picture__loading'
-                        : (status === 'fulfilled')
+                        : (status === 'fulfilled' || status === 'initial')
                             ? 'picture__image'
                             : 'picture__loading'
                 }
             >
                 {
-                    (status === 'fulfilled') &&
+                    (status === 'fulfilled' || status === 'initial') &&
                              <img
                                 src={`${ props.downsized_small.mp4 }`}
                                 srcSet={
@@ -31,7 +31,7 @@ export const PictureGif = (props: RamdomGif) => {
                 }
             </div>
                 {
-                    ( status === 'fulfilled' ) &&
+                    ( status === 'fulfilled' || status === 'initial') &&
                     <div
                         className='picture__favorite'
                         onClick={handleAddFavorite}

@@ -1,8 +1,9 @@
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Home } from './home';
 import { Ramdom } from './ramdom' 
+import { Favorites } from './favorites';
 import { useRoute } from '../../hooks';
 import { useEffect } from 'react';
-import { Home } from './home';
 
 
 export const DashboardRoutes = () => {
@@ -36,6 +37,10 @@ export const DashboardRoutes = () => {
             <Route
                 path='ramdom'
                 element={ <Ramdom /> } 
+            />
+            <Route
+                path='favorites'
+                element={ <Favorites /> } 
             />
         </Routes>
     )

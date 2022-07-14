@@ -1,0 +1,99 @@
+@use '../../../design' as *;
+@use '../../../layout' as *;
+
+
+
+@keyframes intro {
+    from{
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+
+
+.favorites {
+    
+    width: 94vw;
+    // height: max-content(auto, 100vh);
+    overflow: hidden;
+    animation: intro 2.5s ease 1 both;
+    @include position(
+        $position: fixed,
+        $top: 20vh,
+        $left: 3vw,
+    );
+}
+
+
+@include laptop-screen {
+
+    .favorites {
+        
+        @include grid-container(
+            $grid-template-columns: repeat(5, 1fr),
+            $grid-auto-rows: calc(64vh / 3),
+            $gap: 3vw 3vh,
+        );
+    }
+    
+}
+
+
+@include tablet-screen-landscape {
+
+    .favorites {
+        
+        @include grid-container(
+            $grid-template-columns: repeat(5, 1fr),
+            $grid-auto-rows: calc(64vh / 3),
+            $gap: 3vw 3vh,
+        );
+    }
+    
+}
+
+
+@include tablet-screen-portrait {
+
+    .favorites {
+        
+        @include grid-container(
+            $grid-auto-rows: calc(64vh / 3),
+            $grid-template-columns: repeat(5, 1fr),
+            $gap: 7vw 3vh,
+        );
+    }
+    
+}
+
+
+@include movil-screen-landscape {
+
+    .favorites {
+        
+        @include grid-container(
+            $grid-template-columns: repeat(5, 1fr),
+            $grid-auto-rows: calc(64vh / 3),
+            $gap: 3vw 3vh,
+        );
+    }
+    
+}
+
+
+@include movil-screen-portrait {
+
+    .favorites {
+        
+        @include grid-container(
+            $grid-auto-rows: calc(60vh / 5),
+            $grid-template-columns: repeat(3, 1fr),
+            $gap: 3vh 3vw,
+        );
+    }
+    
+}

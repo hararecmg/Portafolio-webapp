@@ -1,7 +1,5 @@
 export const Title = () => {
 
-    //code
-
     return (
         <section className='off-canvas__title'>
             <h2> Hararec Medina González</h2>

@@ -2,6 +2,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Ramdom } from './ramdom' 
 import { useRoute } from '../../hooks';
 import { useEffect } from 'react';
+import { Home } from './home';
 
 
 export const DashboardRoutes = () => {
@@ -13,14 +14,14 @@ export const DashboardRoutes = () => {
     useEffect(() => {
 
         const location = pathname + search;
-        const condition = location === '/ramdom'
+        const condition = location === '/home' || location === '/ramdom'
             || location === '/search' || location === '/favorites';
         
         condition
             ? navigate(`/${ route }`, {
                 replace: true
             })
-            : navigate('/ramdom', {
+            : navigate('/home', {
                 replace: true
             });
             
@@ -28,6 +29,10 @@ export const DashboardRoutes = () => {
     
     return (
         <Routes>
+            <Route
+                path='home'
+                element={ <Home /> } 
+            />
             <Route
                 path='ramdom'
                 element={ <Ramdom /> } 

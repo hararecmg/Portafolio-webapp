@@ -1,4 +1,4 @@
-export type MainMenuTypes = ''|'perfil'|'favorites'|'search'|'ramdom';
+export type MainMenuTypes = ''|'home'|'perfil'|'favorites'|'search'|'ramdom';
 
 export interface MainMenuState extends MainMenuOpen {
     mouse_over: MainMenuTypes;

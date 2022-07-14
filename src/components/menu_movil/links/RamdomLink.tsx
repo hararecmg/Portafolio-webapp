@@ -40,7 +40,7 @@ export const RamdomLink = () => {
                     </svg>
                 </div>
                 <p className='menu-movil__text'>
-                    Aleatorio
+                    Imagenes Aleatorias
                 </p>
             </NavLink>
         </li>

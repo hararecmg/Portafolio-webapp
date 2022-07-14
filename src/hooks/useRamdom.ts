@@ -9,18 +9,6 @@ export const useRamdom = () => {
 
     const dispatch = useAppDispatch();
     const { ramdom } = useAppSelector(state => state.ramdom);
-    // const { ramdom } = ramdom;
-
-    // useEffect(() => {
-        
-    //     dispatch( ramdomThunk());
-
-    //     return () => {
-    //         // clearInterval(interval);
-    //         dispatch( ramdomExitThunk());
-    //     }
-
-    // }, [dispatch]);
 
     useEffect(() => {
         

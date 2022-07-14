@@ -1,5 +1,9 @@
-export type Route = 'ramdom' | 'search' | 'favorites' | '';
+export type Route = 'home' | 'ramdom' | 'search' | 'favorites' | '';
 
-export interface StateRoute {
+export interface StateRoute extends Alternate {
     route: Route;
+}
+
+export interface Alternate {
+    alternate?: boolean;
 }

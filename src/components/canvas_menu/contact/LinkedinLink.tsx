@@ -15,7 +15,7 @@ export const LinkedinLink = () => {
             onMouseOut={handleMouseOutCanvas}
         >
             <a 
-                href='https://www.linkedin.com/in/hararec-medina-gonz%C3%A1lez-980152211/'
+                href='https://www.linkedin.com/in/hararec-medina-gonzález'
                 className='off-canvas__anchor'
                 target='_blank'
                 rel='noreferrer'

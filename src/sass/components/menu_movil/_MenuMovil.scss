@@ -44,6 +44,12 @@
 }
 
 
+.router__home .menu-movil__nav {
+    border: 0.1rem solid #fff;
+    border-right: 0;
+}
+
+
 @include laptop-screen {
 
     .menu-movil {

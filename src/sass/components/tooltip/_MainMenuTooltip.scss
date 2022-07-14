@@ -32,17 +32,74 @@
                 @include tooltip-modifier(
                     $grid-row-start: 8,
                     $grid-row-end: 10,
-                    $grid-column-start: 9,
+                    $grid-column-start: 11,
+                    $grid-column-end: 17,
+                );
+            }
+            
+            &--home {
+                @include tooltip-modifier(
+                    $grid-row-start: 8,
+                    $grid-row-end: 10,
+                    $grid-column-start: 10,
                     $grid-column-end: 14,
                 );
             }
             
-            &--search {
+            &--favorites {
                 @include tooltip-modifier(
                     $grid-row-start: 8,
                     $grid-row-end: 10,
-                    $grid-column-start: 12,
-                    $grid-column-end: 16,
+                    $grid-column-start: 14,
+                    $grid-column-end: 18,
+                );
+            }
+    
+    
+            
+            // &--translate {
+            //     @include tooltip-modifier(
+            //         $grid-row-start: 8,
+            //         $grid-row-end: 10,
+            //         $grid-column-start: 24,
+            //         $grid-column-end: 27,
+            //     );
+            // }
+        }
+    }
+}
+
+
+@include tablet-screen-landscape {
+
+    .main-menu {
+    
+        &__tooltip {
+    
+            &--perfil {
+                @include tooltip-modifier(
+                    $grid-row-start: 8,
+                    $grid-row-end: 10,
+                    $grid-column-start: 4,
+                    $grid-column-end: 8,
+                );
+            }
+    
+            &--ramdom {
+                @include tooltip-modifier(
+                    $grid-row-start: 8,
+                    $grid-row-end: 10,
+                    $grid-column-start: 11,
+                    $grid-column-end: 17,
+                );
+            }
+            
+            &--home {
+                @include tooltip-modifier(
+                    $grid-row-start: 8,
+                    $grid-row-end: 10,
+                    $grid-column-start: 10,
+                    $grid-column-end: 14,
                 );
             }
             

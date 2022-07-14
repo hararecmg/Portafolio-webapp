@@ -15,6 +15,9 @@ export const useMainMenu = ( menuItem: MainMenuTypes = '' ) => {
             case '':
                 text = '';
                 break;
+            case 'home':
+                text = 'inicio';
+                break;
             case 'perfil':
                 text = 'contacto'
                 break;

@@ -43,6 +43,11 @@
 }
 
 
+.router__home .main-menu__links-menu {
+    box-shadow: 0 0.25rem 1.75rem 0.25rem rgb(255, 255, 255, 0.75);
+}
+
+
 @include laptop-screen {
 
     .main-menu {

@@ -1,0 +1,170 @@
+@use '../../../design' as *;
+@use '../../../layout' as *;
+
+
+@keyframes violeta-neon {
+    0% {
+        box-shadow: inset 0 0 1rem #b624d5, 0 0 2rem #b624d5;
+    }
+    
+    50% {
+        box-shadow: inset 0 0 0 #b624d5, 0 0 1rem #b624d5;
+    }
+    
+    0% {
+        box-shadow: inset 0 0 1rem #b624d5, 0 0 2rem #b624d5;
+    }
+}
+
+@keyframes intro {
+    from{
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+
+@keyframes developer {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+
+@keyframes letras-neon {
+    0% {
+        text-shadow: 0 0 0 #b624d5, 0 0 0 #b624d5, 0 0 0 #b624d5, 0 0 0 #b624d5;
+    }
+    50% {
+        text-shadow: 0 0 0.5rem #b624d5, 0 0 1.5rem #b624d5, 0 0 3rem #b624d5, 0 0 5rem #b624d5;
+    }
+    100% {
+        // text-shadow: 0 0 0.5rem #b624d5, 0 0 1.5rem #b624d5, 0 0 3rem #b624d5, 0 0 5rem #b624d5;
+        text-shadow: 0 0 0 #b624d5, 0 0 0 #b624d5, 0 0 0 #b624d5, 0 0 0 #b624d5;
+    }
+}
+
+
+.home {
+    
+    grid-row: 1 / 51;
+    grid-column: 1 / 51;
+    color: #fff;
+    @include flex-container(
+        $justify-content: center,
+    );
+
+    &__container {
+        
+        padding: 2em;
+        // margin-top: 12vh;
+        animation: intro 2.5s ease 1 both;
+        @include flex-container(
+            $flex-direction: column,
+            $flex-wrap: wrap,
+        );
+    }
+
+    &__name {
+        
+        font-family: 'Source Serif Pro', serif;
+        font-weight: 600;
+        font-size: 8rem;
+        // color: #fff;
+        text-align: center;
+        // mix-blend-mode: exclusion;
+        animation: letras-neon 5s infinite ease-in;
+    }
+    
+    &__developer {
+        
+        font-size: 6.5rem;
+        font-family: 'Source Serif Pro', serif;
+        font-weight: 550;
+        // color: #fff;
+        text-align: center;
+        @include flex-container(
+            $justify-content: center,
+            $flex-wrap: wrap,
+        );
+
+        div {
+            @include position();
+        }
+        
+        span {
+            border-left: 0.2rem solid #fff;
+            width: 0;
+            position: absolute;
+            right: 0;
+            background-color: #000;
+            animation: developer 3s infinite alternate steps(11);
+        }
+    }
+
+    // &__knowledge {
+        
+    //     animation: intro 2.5s ease 1s both;
+    //     font-size: 2rem;
+    //     font-family: 'Crimson Text', serif;
+    //     list-style-type: none;
+    //     @include flex-container(
+    //         $flex-wrap: wrap,
+    //     );
+
+    //     li {
+    //         animation: violeta-neon 1.5s infinite ease-in;
+    //         margin-left: 1vw;
+    //         margin-right: 1vw;
+    //         padding: 0.5rem;
+    //         border-radius: 50%;
+    //         border: 0.1rem solid #fff;
+    //     }
+    // }
+}
+
+
+@include movil-screen-landscape {
+
+    .home {
+    
+        overflow: hidden;
+        
+        &__name {
+            
+            font-size: 6rem;
+        }
+        
+        &__developer {
+            
+            font-size: 4rem;
+        }
+    }
+}
+
+
+@include movil-screen-portrait {
+
+    .home {
+
+        overflow: hidden;
+    
+        &__name {
+            
+            font-size: 6rem;
+        }
+        
+        &__developer {
+            
+            font-size: 4rem;
+        }
+    }
+}
+
+

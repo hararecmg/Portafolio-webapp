@@ -33,6 +33,7 @@ export const Home = () => {
                 <div className='home__name'>
                     Hararec Medina González
                 </div>
+                <div style={{fontSize: '3.5rem', textAlign: 'center'}}>Desde Mayo 2021</div>
                 <div className='home__developer'>
                     Desarrollador&#160; 
                     <div>
